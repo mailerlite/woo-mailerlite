@@ -6,7 +6,7 @@ function woo_ml_integration_setup_completed() {
 
     $integration_setup = get_option( 'woo_ml_integration_setup', false );
 
-    return ( '1' == $integration_setup ) ? true : false;
+    return '1' == $integration_setup;
 }
 
 /**
@@ -40,6 +40,7 @@ function woo_ml_setup_integration() {
  * - Check if our custom fields were already created
  * - Create missing custom fields
  *
+ * @param null $fields
  * @return bool
  */
 function woo_ml_setup_integration_custom_fields($fields = null) {
